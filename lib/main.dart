@@ -51,7 +51,7 @@ class _MyBioState extends State<MyBio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(244, 67, 54, 1),
         leading: const Icon(
@@ -72,35 +72,87 @@ class _MyBioState extends State<MyBio> {
         ],
         elevation: 5.0,
         ),
-        body:  Padding(
-          padding:  const EdgeInsets.all(20.0),
+        body:   Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                color: Colors.amber,
-                height: 50.0,
-                width: 80.0,
-                child:  const Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Text(
-                    'Name', 
-                  style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,),
-                  ),
-                  ),
+             const CircleAvatar(
+                maxRadius: 60.0,
+                backgroundColor: Colors.red,
+                backgroundImage: NetworkImage('https://i.pinimg.com/474x/3e/fe/22/3efe228250793b403805bed5f2f8e5a4.jpg'),
+      
               ),
-           
-                const Text('Hannah Duah',
-                style: TextStyle(
-                fontSize: 18.0, 
-                fontWeight: FontWeight.normal,
-                ),  
-                ),
-                 Text('Interests:'),
-                Text('Flutter'),
-                 Text('Level of Knowledge:'),
-                Text('Beginner'),
+             const  Text('Hannah Duah',
+               style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,                
+               ),
+               ),
+            const   Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text('Age:',
+                  style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,                
+                   ),
+                 ),
+                  Text('100yrs',
+                  style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,                
+                   ),
+                 ),
+                ],
+               ),
+             const  Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text('Flutter Level:',
+                  style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,                
+                   ),
+                 ),
+                  Text('Beginner',
+                  style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,                
+                   ),
+                 ),
+                ],
+               ),
+             const  Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text('College:',
+                  style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,                
+                   ),
+                 ),
+                  Text('Accra Resource Center',
+                  style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,                
+                   ),
+                 ),
+                ],
+               ),
+               SizedBox(
+                height: 50.0,
+                width: 100.0,
+                 child: ElevatedButton(
+                  onPressed: (){},
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.red,), 
+                  child:   const Text('Say Hi', 
+                  style: TextStyle(
+                    color: Colors.white, 
+                    fontSize: 18.0),
+                     ),
+                  ),
+               ),
             ],
           ),
         ),
