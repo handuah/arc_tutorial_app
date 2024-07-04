@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -71,14 +72,31 @@ class _MyBioState extends State<MyBio> {
         ],
         elevation: 5.0,
         ),
-        body: const Padding(
-          padding:  EdgeInsets.all(20.0),
+        body:  Padding(
+          padding:  const EdgeInsets.all(20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Name:'),
-                Text('Hannah Duah'),
+              Container(
+                color: Colors.amber,
+                height: 50.0,
+                width: 80.0,
+                child:  const Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text(
+                    'Name', 
+                  style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,),
+                  ),
+                  ),
+              ),
+           
+                const Text('Hannah Duah',
+                style: TextStyle(
+                fontSize: 18.0, 
+                fontWeight: FontWeight.normal,
+                ),  
+                ),
                  Text('Interests:'),
                 Text('Flutter'),
                  Text('Level of Knowledge:'),
